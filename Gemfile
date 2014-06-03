@@ -39,3 +39,20 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
+end
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+end
