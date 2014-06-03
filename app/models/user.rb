@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   def permissions_all
     [permissions, role_permissions].flatten
   end
+
+  validates :name, presence: true
 end

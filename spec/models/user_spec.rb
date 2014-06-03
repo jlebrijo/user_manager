@@ -6,6 +6,7 @@ describe User, type: :model do
   it { should belong_to :role }
   it { should have_many :role_permissions }
   it { should have_and_belong_to_many :permissions }
+  it { should validate_presence_of :name}
 
   describe :permissions_all do
     let(:admin) { create :admin}
